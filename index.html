@@ -30,9 +30,12 @@
     <!-- Navigation / Header -->
     <header class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-2 md:mb-0">
-                <h1 class="text-xl md:text-2xl font-bold tracking-tight">Market Intelligence: 1x8 Channel Cedar</h1>
-                <p class="text-gray-400 text-xs md:text-sm">Target: STK (Select Tight Knot) Kiln-Dried</p>
+            <div class="flex items-center gap-4 mb-2 md:mb-0">
+                <img src="images/square-logo.png" alt="HVMA Logo" class="w-10 h-10 md:w-14 md:h-14 rounded-lg object-contain">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold tracking-tight">Market Intelligence: 1x8 Channel Cedar</h1>
+                    <p class="text-gray-400 text-xs md:text-sm">Target: STK (Select Tight Knot) Kiln-Dried</p>
+                </div>
             </div>
             <div class="text-right">
                 <span class="block text-xs text-gray-400">Recommendation</span>
@@ -53,7 +56,7 @@
                 <div>
                     <h2 class="text-2xl font-bold text-slate-800 mb-2">Executive Summary</h2>
                     <p class="text-slate-600 mb-6 leading-relaxed">
-                        We are currently in a <strong class="text-emerald-700">seasonal pricing trough</strong>. With project requirements revised to <strong>120k–140k linear feet</strong>, the financial risk of waiting has increased significantly. Delaying procurement until March exposes the project to a projected <strong>9% seasonal premium</strong>, potentially costing over <strong>$42,000</strong> in avoidable inflation.
+                        We are currently in a <strong class="text-emerald-700">seasonal pricing trough</strong>. With project requirements revised to <strong>120k–140k linear feet</strong>, there is financial risk in waiting. Based on Federal Reserve PPI data (2005-2023), wood siding experiences a <strong>2-5% seasonal premium</strong> from winter to summer. Delaying procurement until March could cost approximately <strong>$9,800</strong> in avoidable inflation.
                     </p>
                 </div>
                 
@@ -65,8 +68,8 @@
                     </div>
                     <div class="p-4 bg-rose-50 rounded-lg border border-rose-100 transition hover:shadow-md">
                         <p class="text-xs font-bold text-rose-700 uppercase">Projected (March)</p>
-                        <p class="text-3xl font-extrabold text-slate-800 mt-1">$3.70 <span class="text-sm font-normal text-slate-500">/lf</span></p>
-                        <p class="text-xs text-slate-500 mt-1">Pre-Construction Rush</p>
+                        <p class="text-3xl font-extrabold text-slate-800 mt-1">$3.47 <span class="text-sm font-normal text-slate-500">/lf</span></p>
+                        <p class="text-xs text-slate-500 mt-1">Pre-Construction Season</p>
                     </div>
                     <div class="p-4 bg-blue-50 rounded-lg border border-blue-100 transition hover:shadow-md">
                         <p class="text-xs font-bold text-blue-700 uppercase">Material Needed</p>
@@ -102,15 +105,9 @@
 
         <!-- SECTION 2: 12-Month Projection Chart -->
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-            <div class="flex flex-col md:flex-row justify-between md:items-end mb-6">
-                <div>
-                    <h3 class="text-xl font-bold text-slate-800">2026 Price Forecast: Full Year</h3>
-                    <p class="text-sm text-slate-500 mt-1">Historical seasonality applied to 2026 tariff baselines.</p>
-                </div>
-                <div class="mt-2 md:mt-0 flex items-center gap-2">
-                    <span class="w-3 h-3 bg-blue-500 opacity-20 inline-block"></span>
-                    <span class="text-xs text-slate-500">Forecast Uncertainty Range</span>
-                </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-slate-800">2026 Price Forecast: Full Year</h3>
+                <p class="text-sm text-slate-500 mt-1">Historical seasonality applied to 2026 tariff baselines.</p>
             </div>
             
             <div class="chart-container">
@@ -139,12 +136,12 @@
                             <span class="font-mono font-bold">$340,000</span>
                         </div>
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">March Price ($3.70):</span>
-                            <span class="font-mono font-bold text-rose-600">$370,000</span>
+                            <span class="text-slate-500">March Price ($3.47):</span>
+                            <span class="font-mono font-bold text-rose-600">$347,000</span>
                         </div>
                         <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
                             <span class="font-bold text-slate-700 text-sm">Loss:</span>
-                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$30,000</span>
+                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$7,000</span>
                         </div>
                     </div>
                 </div>
@@ -159,18 +156,18 @@
                             <span class="font-mono font-bold">$408,000</span>
                         </div>
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">March Price ($3.70):</span>
-                            <span class="font-mono font-bold text-rose-600">$444,000</span>
+                            <span class="text-slate-500">March Price ($3.47):</span>
+                            <span class="font-mono font-bold text-rose-600">$416,400</span>
                         </div>
                         <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
                             <span class="font-bold text-slate-700 text-sm">Loss:</span>
-                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$36,000</span>
+                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$8,400</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Scenario 3 -->
-                <div class="bg-white p-6 rounded-xl border-t-4 border-emerald-600 shadow-md transform scale-105 z-10">
+                <div class="bg-white p-6 rounded-xl border-t-4 border-emerald-600 shadow-md transform scale-105 z-10 overflow-hidden">
                     <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-bl">LIKELY SCOPE</div>
                     <h4 class="font-bold text-slate-700 text-lg">140,000 LF</h4>
                     <p class="text-xs text-slate-400 uppercase tracking-wide mb-4">Revised High End</p>
@@ -180,12 +177,12 @@
                             <span class="font-mono font-bold">$476,000</span>
                         </div>
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">March Price ($3.70):</span>
-                            <span class="font-mono font-bold text-rose-600">$518,000</span>
+                            <span class="text-slate-500">March Price ($3.47):</span>
+                            <span class="font-mono font-bold text-rose-600">$485,800</span>
                         </div>
                         <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
                             <span class="font-bold text-slate-700 text-sm">Potential Loss:</span>
-                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$42,000</span>
+                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$9,800</span>
                         </div>
                     </div>
                 </div>
@@ -196,12 +193,20 @@
         <footer class="mt-12 py-8 bg-white border-t border-slate-200">
             <div class="container mx-auto px-6">
                 <h4 class="text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider">Verified Data Sources</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-500">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-500">
                     <div>
                         <p class="mb-2"><strong>Pricing Trends & Futures:</strong></p>
                         <ul class="space-y-2 pl-2">
                             <li><a href="https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber.html" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">CME Group Lumber Futures <span class="ml-1 text-[10px] text-gray-400">(Live Market Data)</span></a></li>
                             <li><a href="https://madisonsreport.com/lumber-market-updates/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">Madison's Lumber Reporter <span class="ml-1 text-[10px] text-gray-400">(Market Updates)</span></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="mb-2"><strong>Seasonal Price Data:</strong></p>
+                        <ul class="space-y-2 pl-2">
+                            <li><a href="https://fred.stlouisfed.org/series/WPU084903" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">FRED: Wood Siding PPI <span class="ml-1 text-[10px] text-gray-400">(2003-2025 Historical)</span></a></li>
+                            <li><a href="https://www.eastcoastonline.com/insights/seasonal-lumber-price-trends-amp-when-to-lock-in-bulk-orders" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">East Coast Lumber <span class="ml-1 text-[10px] text-gray-400">(Seasonal Trends)</span></a></li>
+                            <li><a href="https://www.resourcewise.com/market-watch-blog/understanding-seasonality-in-timber-prices" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">ResourceWise <span class="ml-1 text-[10px] text-gray-400">(Seasonality Analysis)</span></a></li>
                         </ul>
                     </div>
                     <div>
@@ -212,9 +217,40 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Geopolitical Risk Section -->
+                <div class="mt-6 pt-6 border-t border-slate-100">
+                    <h4 class="text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">Geopolitical Risk: Canadian Softwood Tariffs</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                            <p class="text-xs font-bold text-amber-800 mb-2">Current Combined Tariff: ~45%</p>
+                            <ul class="text-[11px] text-slate-600 space-y-1">
+                                <li>Anti-dumping duties: 14.63%</li>
+                                <li>Countervailing duties: 20.53%</li>
+                                <li>Section 232 tariff (Oct 2025): 10%</li>
+                            </ul>
+                            <p class="text-[10px] text-slate-500 mt-2 italic">Current $3.40/lf price already reflects these tariffs.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                            <p class="text-xs font-bold text-slate-700 mb-2">2026 Risk Factors</p>
+                            <ul class="text-[11px] text-slate-600 space-y-1">
+                                <li><span class="text-amber-600 font-bold">CUSMA Review:</span> Trade exemptions "at risk" in 2026</li>
+                                <li><span class="text-emerald-600 font-bold">Jan 2026 Pause:</span> Planned tariff increases canceled</li>
+                                <li><span class="text-slate-500">Direction:</span> Could rise (CUSMA revoked) or fall (deal)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-[10px] text-slate-500">
+                        <strong>Sources:</strong>
+                        <a href="https://www.congress.gov/crs-product/R48781" target="_blank" class="text-blue-600 hover:underline ml-1">Congress.gov CRS Report</a> |
+                        <a href="https://www.nahb.org/blog/2025/02/trump-imposes-tariff-on-lumber" target="_blank" class="text-blue-600 hover:underline">NAHB Section 232 Analysis</a> |
+                        <a href="https://canada.constructconnect.com/dcn/news/economic/2026/01/a-tariff-exemption-was-canadas-salvation-in-2025-its-absolutely-at-risk-in-2026" target="_blank" class="text-blue-600 hover:underline">ConstructConnect 2026 Outlook</a>
+                    </div>
+                </div>
+
                 <div class="mt-6 pt-6 border-t border-slate-100 text-center text-[10px] text-slate-400">
-                    <p class="mb-2"><strong>Methodology:</strong> Seasonal projections based on 10-15% historical winter-to-summer variance documented by industry analysts (East Coast Lumber, HomeGuide). January price reflects secured vendor quote.</p>
-                    <p>Disclaimer: Projections based on historical seasonality (2020-2025) and current tariff schedules. Future market performance is subject to geopolitical change.</p>
+                    <p class="mb-2"><strong>Methodology:</strong> Seasonal projections based on 2-5% historical winter-to-summer variance from Federal Reserve FRED PPI data (WPU084903, 2005-2023). January price reflects secured vendor quote.</p>
+                    <p>Disclaimer: Projections based on historical seasonality and current tariff schedules. FRED data covers aggregate wood siding; cedar-specific volatility may vary. Future market performance is subject to geopolitical change.</p>
                 </div>
             </div>
         </footer>
@@ -231,14 +267,14 @@
         // Dec: Trough
         const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         
-        // "Likely" scenario based on 10-15% seasonal swing (industry-documented)
-        const dataMean = [3.40, 3.50, 3.70, 3.85, 3.91, 3.91, 3.85, 3.75, 3.60, 3.50, 3.45, 3.42];
+        // Mean scenario based on 2-5% seasonal swing (FRED PPI data 2005-2023)
+        const dataMean = [3.40, 3.42, 3.47, 3.52, 3.57, 3.57, 3.54, 3.50, 3.45, 3.42, 3.40, 3.40];
 
-        // Upper bound (High demand scenario, ~20% swing)
-        const dataHigh = [3.40, 3.60, 3.85, 4.00, 4.08, 4.08, 4.00, 3.90, 3.75, 3.60, 3.50, 3.45];
+        // Upper bound (Higher volatility scenario, ~8% swing)
+        const dataHigh = [3.40, 3.45, 3.53, 3.60, 3.67, 3.67, 3.62, 3.55, 3.48, 3.43, 3.41, 3.40];
 
-        // Lower bound (Low demand scenario, ~10% swing)
-        const dataLow =  [3.40, 3.45, 3.60, 3.70, 3.74, 3.74, 3.70, 3.60, 3.50, 3.45, 3.42, 3.40];
+        // Lower bound (Stable market scenario, ~2% swing)
+        const dataLow =  [3.40, 3.41, 3.43, 3.45, 3.47, 3.47, 3.46, 3.44, 3.42, 3.41, 3.40, 3.40];
 
         new Chart(ctx, {
             type: 'line',
@@ -323,8 +359,8 @@
                 scales: {
                     y: {
                         beginAtZero: false,
-                        min: 3.20,
-                        max: 4.30,
+                        min: 3.30,
+                        max: 3.80,
                         title: {
                             display: true,
                             text: 'Price per Linear Foot ($)'
