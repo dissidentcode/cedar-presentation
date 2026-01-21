@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a **market intelligence presentation** for lumber procurement decision-making. It presents a business case for purchasing STK (Select Tight Knot) rustic channel cedar siding lumber at current seasonal low prices (Jan/Feb 2026) rather than waiting until March when prices are projected to increase.
+This is a **procurement analysis presentation** for lumber purchasing decision-making. It presents a business case for purchasing STK (Select Tight Knot) rustic channel cedar siding lumber at current seasonal low prices (Jan/Feb 2026) rather than waiting until March when prices are projected to increase.
 
 **Core Recommendation:** Execute purchase at $3.40/linear foot in Jan/Feb 2026 to avoid the projected $3.70/lf March price (+9% seasonal premium).
 
@@ -24,7 +24,8 @@ cedar-presentation/
 ├── README.md           # Basic project info
 ├── CLAUDE.md           # This file
 └── docs/
-    └── Cedar Siding Market Assessment Inquiry - Google Docs.pdf
+    ├── Cedar Siding Market Assessment Inquiry - Google Docs.pdf
+    └── Cedar Siding Quotes.xlsx   # Vendor quote data (7 suppliers)
 ```
 
 ## Running the Project
@@ -47,7 +48,24 @@ Located in `index.html`:
 | Material needed | 120k-140k LF | Lines 72-74 |
 | Seasonal variance | 2-5% | Based on FRED PPI data (WPU084903, 2005-2023) |
 
-### Price Projection Arrays (Lines 231-237)
+### Vendor Quote Data (from docs/Cedar Siding Quotes.xlsx)
+
+| Vendor | Location | Price/LF |
+|--------|----------|----------|
+| Legacy Pre-Finishing | NC | $3.40 |
+| Interstate | CT | $3.44 |
+| Buffalo Lumber | TN | $3.77 |
+| Lyon & Billard | CT | $3.80 |
+| Builder's FirstSource | CT | $3.93 |
+| Ring's End | CT | $4.04 |
+| Liberty Cedar | RI | $4.10 |
+
+**Key metrics:**
+- Vendor spread: $0.70/lf (21%)
+- 140k LF: Best vs Worst = $98,000 difference
+- 140k LF: Best vs Next-tier ($3.77) = $51,800 difference
+
+### Price Projection Arrays (Lines ~340-350)
 - `dataMean` - Mean projection based on 2-5% seasonal swing (FRED PPI data)
 - `dataHigh` - Upper bound (~8% swing, higher volatility)
 - `dataLow` - Lower bound (~2% swing, stable market)
@@ -55,10 +73,11 @@ Located in `index.html`:
 ## Content Sections in index.html
 
 1. **Header** (31-45) - Sticky nav with recommendation status
-2. **Executive Summary** (49-101) - Key metrics and STK vs Clear context
-3. **Price Forecast Chart** (104-126) - 12-month Chart.js visualization
-4. **Financial Scenarios** (129-193) - Three quantity models (100k, 120k, 140k LF)
-5. **Data Sources** (196-220) - Verified source links and methodology
+2. **Executive Summary** (49-104) - Key metrics and STK vs Clear context
+3. **Vendor Comparison** (106-213) - Current market quotes from 7 vendors with cost analysis
+4. **Price Forecast Chart** (215-232) - 12-month Chart.js visualization
+5. **Financial Scenarios** (234-330) - Three quantity models + vendor risk scenario
+6. **Data Sources** (332-365) - Verified source links, tariff info, and methodology
 
 ## Important Conventions
 
