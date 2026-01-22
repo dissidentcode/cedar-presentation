@@ -36,11 +36,11 @@
     <header class="shadow-lg sticky top-0 z-50" style="background-color: var(--prussian-blue);">
         <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center gap-4 mb-2 md:mb-0">
-                <img src="images/square-logo.png" alt="HVMA Logo" class="w-10 h-10 md:w-14 md:h-14 rounded-lg object-contain">
+                <img src="images/HV Logo - Best Quality - Transparent BG.png" alt="HVMA Logo" class="w-10 h-10 md:w-14 md:h-14 object-contain" style="filter: brightness(0) invert(1);">
                 <div>
                     <h1 class="text-xl md:text-2xl font-bold tracking-tight text-white">Procurement Analysis: 1x8 Channel Cedar</h1>
                     <p class="text-xs md:text-sm" style="color: var(--grey);">Target: STK (Select Tight Knot) Kiln-Dried</p>
-                    <p class="text-[10px] md:text-xs mt-1" style="color: var(--grey); opacity: 0.7;">Prepared by the Finance Team for the Finance Committee & Board of Trustees</p>
+                    <p class="text-[10px] md:text-xs mt-1" style="color: var(--orange);">Prepared by the Finance Team for the Finance Committee & Board of Trustees</p>
                 </div>
             </div>
             <div class="text-right">
@@ -69,7 +69,7 @@
                     </div>
 
                     <p class="mb-4 leading-relaxed" style="color: var(--prussian-blue);">
-                        Waiting until March risks up to <strong style="color: var(--orange);">$61,600</strong> in additional costs: <strong>$9,800</strong> from seasonal price increases plus <strong>$51,800</strong> if the best-priced vendor sells out. We are currently in a seasonal pricing trough—vendor quotes range from $3.40 to $4.10/lf (21% spread). At 140k LF, locking in the best quote now protects against both risks.
+                        Waiting until March risks up to <strong style="color: var(--orange);">$61,600</strong> in additional costs: <strong>$9,800</strong> from seasonal price increases plus <strong>$51,800</strong> if the best-priced vendor sells out. We are currently in a seasonal pricing trough - vendor quotes range from $3.40 to $4.10/lf (21% spread). At 140,000 linear feet, locking in the best quote now protects against both risks.
                     </p>
                 </div>
 
@@ -146,7 +146,7 @@
 
                 <!-- Key Insight -->
                 <div class="rounded-lg p-4 flex flex-col justify-center" style="background-color: #FFF3E0; border: 1px solid var(--orange);">
-                    <p class="text-sm font-bold mb-2" style="color: var(--prussian-blue);">Vendor Selection Impact at 140k LF:</p>
+                    <p class="text-sm font-bold mb-2" style="color: var(--prussian-blue);">Vendor Selection Impact at 140K linear feet:</p>
                     <div class="flex items-baseline gap-2">
                         <span class="text-3xl font-extrabold" style="color: var(--orange);">$98,000</span>
                         <span class="text-sm" style="color: var(--prussian-blue);">difference between lowest and highest quote</span>
@@ -163,7 +163,7 @@
                             <th class="text-left py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">Vendor</th>
                             <th class="text-left py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">Location</th>
                             <th class="text-right py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">Price/LF</th>
-                            <th class="text-right py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">140k LF Cost</th>
+                            <th class="text-right py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">140K linear feet Cost</th>
                             <th class="text-right py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">vs Best</th>
                         </tr>
                     </thead>
@@ -223,17 +223,17 @@
         <section class="bg-white rounded-xl shadow-sm p-6" style="border: 1px solid var(--grey);">
             <div class="mb-6">
                 <h3 class="text-xl font-bold" style="color: var(--prussian-blue);">2026 Price Forecast: Full Year</h3>
-                <p class="text-sm mt-1" style="color: #666;">Historical seasonality applied to 2026 tariff baselines.</p>
+                <p class="text-sm mt-1" style="color: #666;">Historical seasonality + projected 3-5% year-over-year price increase applied to 2026 tariff baselines.</p>
             </div>
 
             <div class="chart-container">
                 <canvas id="marketChart"></canvas>
             </div>
 
-            <div class="mt-4 text-xs p-4 rounded-lg flex items-start" style="color: #666; background-color: var(--grey);">
-                <span class="text-xl mr-2">ℹ️</span>
-                <p>
-                    <strong style="color: var(--prussian-blue);">Chart Logic:</strong> The "Forecast Range" represents the volatility gap. The Lower Bound assumes a recessionary housing market; the Upper Bound assumes standard demand plus the full impact of the 2026 Canadian Softwood Duty Administrative Review.
+            <div class="mt-4 text-xs p-4 rounded-lg flex" style="color: #666; background-color: var(--grey);">
+                <span class="mr-2 leading-relaxed">ℹ️</span>
+                <p class="leading-relaxed">
+                    <strong style="color: var(--prussian-blue);">Chart Logic:</strong> Projections include both seasonal variation (spring/summer peak) and year-over-year price increase trend. The Lower Bound assumes a recessionary market (+1% YoY); the Upper Bound assumes standard demand plus full tariff impact (+5% YoY). Mean projection shows +3% YoY trend.
                 </p>
             </div>
         </section>
@@ -348,7 +348,7 @@
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h4 class="font-bold text-lg mb-2" style="color: var(--prussian-blue);">Vendor Availability Risk (140k LF)</h4>
+                        <h4 class="font-bold text-lg mb-2" style="color: var(--prussian-blue);">Vendor Availability Risk (140K linear feet)</h4>
                         <p class="text-sm mb-4" style="color: var(--prussian-blue);">If the best-priced vendor sells out or cannot fulfill the order, the next available tier costs significantly more.</p>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="bg-white rounded-lg p-4" style="border: 1px solid var(--grey);">
@@ -374,7 +374,7 @@
 
             <!-- Total Risk Summary -->
             <div class="mt-6 rounded-xl p-6" style="background-color: var(--prussian-blue);">
-                <h4 class="font-bold text-lg mb-4 text-white">Total Risk Summary (140k LF)</h4>
+                <h4 class="font-bold text-lg mb-4 text-white">Total Risk Summary (140K linear feet)</h4>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="bg-white rounded-lg p-4">
                         <p class="text-xs font-bold uppercase mb-1" style="color: var(--prussian-blue);">Seasonal Risk</p>
@@ -444,14 +444,15 @@
         // Dec: Trough
         const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         
-        // Mean scenario based on 2-5% seasonal swing (FRED PPI data 2005-2023)
-        const dataMean = [3.40, 3.42, 3.47, 3.52, 3.57, 3.57, 3.54, 3.50, 3.45, 3.42, 3.40, 3.40];
+        // Mean scenario: seasonal swing + 3% YoY trend (FRED PPI data + market assessment)
+        // Jan=3.40, peak May/Jun ~3.60, Dec ~3.50
+        const dataMean = [3.40, 3.43, 3.49, 3.55, 3.60, 3.61, 3.58, 3.55, 3.51, 3.49, 3.48, 3.50];
 
-        // Upper bound (Higher volatility scenario, ~8% swing)
-        const dataHigh = [3.40, 3.45, 3.53, 3.60, 3.67, 3.67, 3.62, 3.55, 3.48, 3.43, 3.41, 3.40];
+        // Upper bound: seasonal swing + 5% YoY trend (higher volatility scenario)
+        const dataHigh = [3.40, 3.46, 3.55, 3.64, 3.71, 3.73, 3.69, 3.64, 3.58, 3.55, 3.54, 3.57];
 
-        // Lower bound (Stable market scenario, ~2% swing)
-        const dataLow =  [3.40, 3.41, 3.43, 3.45, 3.47, 3.47, 3.46, 3.44, 3.42, 3.41, 3.40, 3.40];
+        // Lower bound: seasonal swing + 1% YoY trend (stable market scenario)
+        const dataLow =  [3.40, 3.42, 3.45, 3.48, 3.51, 3.52, 3.50, 3.48, 3.45, 3.44, 3.43, 3.43];
 
         new Chart(ctx, {
             type: 'line',
@@ -537,7 +538,7 @@
                     y: {
                         beginAtZero: false,
                         min: 3.30,
-                        max: 3.80,
+                        max: 4.00,
                         title: {
                             display: true,
                             text: 'Price per Linear Foot ($)'
