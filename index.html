@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procurement Analysis: 1x8 Channel Cedar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Chart.js Annotation Plugin for the 'Today' line -->
@@ -15,11 +18,13 @@
             height: 400px;
         }
         :root {
-            --bg-color: #F8FAFC;
-            --primary: #0F766E; /* Teal/Forest for Cedar context */
-            --accent: #B45309; /* Cedar/Wood tone */
+            --black: #000000;
+            --prussian-blue: #14213D;
+            --orange: #FCA311;
+            --grey: #E5E5E5;
+            --white: #FFFFFF;
         }
-        body { background-color: var(--bg-color); font-family: 'Segoe UI', sans-serif; color: #1e293b; }
+        body { background-color: var(--grey); font-family: 'Libre Franklin', sans-serif; color: var(--black); }
         
         /* Smooth scrolling for anchor links */
         html { scroll-behavior: smooth; }
@@ -28,20 +33,20 @@
 <body class="antialiased pb-12">
 
     <!-- Navigation / Header -->
-    <header class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+    <header class="shadow-lg sticky top-0 z-50" style="background-color: var(--prussian-blue);">
         <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center gap-4 mb-2 md:mb-0">
                 <img src="images/square-logo.png" alt="HVMA Logo" class="w-10 h-10 md:w-14 md:h-14 rounded-lg object-contain">
                 <div>
-                    <h1 class="text-xl md:text-2xl font-bold tracking-tight">Procurement Analysis: 1x8 Channel Cedar</h1>
-                    <p class="text-gray-400 text-xs md:text-sm">Target: STK (Select Tight Knot) Kiln-Dried</p>
-                    <p class="text-gray-500 text-[10px] md:text-xs mt-1">Prepared by the Finance Team for the Finance Committee & Board of Trustees</p>
+                    <h1 class="text-xl md:text-2xl font-bold tracking-tight text-white">Procurement Analysis: 1x8 Channel Cedar</h1>
+                    <p class="text-xs md:text-sm" style="color: var(--grey);">Target: STK (Select Tight Knot) Kiln-Dried</p>
+                    <p class="text-[10px] md:text-xs mt-1" style="color: var(--grey); opacity: 0.7;">Prepared by the Finance Team for the Finance Committee & Board of Trustees</p>
                 </div>
             </div>
             <div class="text-right">
-                <span class="block text-xs text-gray-400">Recommendation</span>
-                <span class="text-emerald-400 font-bold uppercase tracking-wider text-sm flex items-center justify-end">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+                <span class="block text-xs" style="color: var(--grey);">Recommendation</span>
+                <span class="font-bold uppercase tracking-wider text-sm flex items-center justify-end" style="color: var(--orange);">
+                    <span class="w-2 h-2 rounded-full mr-2 animate-pulse" style="background-color: var(--orange);"></span>
                     Execute Purchase (Jan/Feb 2026)
                 </span>
             </div>
@@ -53,58 +58,58 @@
         <!-- SECTION 1: Executive Summary & Real-Time Stats -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Main Recommendation Card -->
-            <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between">
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-sm p-6 flex flex-col justify-between" style="border: 1px solid var(--grey);">
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-800 mb-2">Executive Summary</h2>
+                    <h2 class="text-2xl font-bold mb-2" style="color: var(--prussian-blue);">Executive Summary</h2>
 
                     <!-- Recommendation Callout -->
-                    <div class="bg-emerald-600 text-white rounded-lg p-4 mb-4">
-                        <p class="font-bold text-sm uppercase tracking-wide mb-1">Recommendation</p>
+                    <div class="text-white rounded-lg p-4 mb-4" style="background-color: var(--prussian-blue);">
+                        <p class="font-bold text-sm uppercase tracking-wide mb-1" style="color: var(--orange);">Recommendation</p>
                         <p class="text-lg">Execute cedar purchase now at <strong>$3.40/lf</strong> from Legacy Pre-Finishing (NC).</p>
                     </div>
 
-                    <p class="text-slate-600 mb-4 leading-relaxed">
-                        Waiting until March risks up to <strong class="text-rose-600">$61,600</strong> in additional costs: <strong>$9,800</strong> from seasonal price increases plus <strong>$51,800</strong> if the best-priced vendor sells out. We are currently in a seasonal pricing trough—vendor quotes range from $3.40 to $4.10/lf (21% spread). At 140k LF, locking in the best quote now protects against both risks.
+                    <p class="mb-4 leading-relaxed" style="color: var(--prussian-blue);">
+                        Waiting until March risks up to <strong style="color: var(--orange);">$61,600</strong> in additional costs: <strong>$9,800</strong> from seasonal price increases plus <strong>$51,800</strong> if the best-priced vendor sells out. We are currently in a seasonal pricing trough—vendor quotes range from $3.40 to $4.10/lf (21% spread). At 140k LF, locking in the best quote now protects against both risks.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-auto">
-                    <div class="p-4 bg-emerald-50 rounded-lg border border-emerald-100 transition hover:shadow-md">
-                        <p class="text-xs font-bold text-emerald-700 uppercase">Best Quote (Jan/Feb)</p>
-                        <p class="text-3xl font-extrabold text-slate-800 mt-1">$3.40 <span class="text-sm font-normal text-slate-500">/lf</span></p>
-                        <p class="text-xs text-slate-500 mt-1">Legacy Pre-Finishing (NC)</p>
+                    <div class="p-4 rounded-lg transition hover:shadow-md" style="background-color: var(--grey); border: 1px solid #ccc;">
+                        <p class="text-xs font-bold uppercase" style="color: var(--prussian-blue);">Best Quote (Jan/Feb)</p>
+                        <p class="text-3xl font-extrabold mt-1" style="color: var(--black);">$3.40 <span class="text-sm font-normal" style="color: #666;">/lf</span></p>
+                        <p class="text-xs mt-1" style="color: #666;">Legacy Pre-Finishing (NC)</p>
                     </div>
-                    <div class="p-4 bg-rose-50 rounded-lg border border-rose-100 transition hover:shadow-md">
-                        <p class="text-xs font-bold text-rose-700 uppercase">Cost of Waiting</p>
-                        <p class="text-3xl font-extrabold text-rose-600 mt-1">+$9,800</p>
-                        <p class="text-xs text-slate-500 mt-1">If delayed to March</p>
+                    <div class="p-4 rounded-lg transition hover:shadow-md" style="background-color: #FFF3E0; border: 1px solid var(--orange);">
+                        <p class="text-xs font-bold uppercase" style="color: var(--orange);">Cost of Waiting</p>
+                        <p class="text-3xl font-extrabold mt-1" style="color: var(--orange);">+$9,800</p>
+                        <p class="text-xs mt-1" style="color: #666;">If delayed to March</p>
                     </div>
-                    <div class="p-4 bg-blue-50 rounded-lg border border-blue-100 transition hover:shadow-md">
-                        <p class="text-xs font-bold text-blue-700 uppercase">Material Needed</p>
-                        <p class="text-3xl font-extrabold text-slate-800 mt-1">140k <span class="text-sm font-normal text-slate-500">LF</span></p>
-                        <p class="text-xs text-slate-500 mt-1">Max Scope Estimate</p>
+                    <div class="p-4 rounded-lg transition hover:shadow-md" style="background-color: var(--grey); border: 1px solid #ccc;">
+                        <p class="text-xs font-bold uppercase" style="color: var(--prussian-blue);">Material Needed</p>
+                        <p class="text-3xl font-extrabold mt-1" style="color: var(--black);">140k <span class="text-sm font-normal" style="color: #666;">LF</span></p>
+                        <p class="text-xs mt-1" style="color: #666;">Max Scope Estimate</p>
                     </div>
                 </div>
             </div>
 
             <!-- Context Card: STK vs Clear -->
-            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col">
-                <h3 class="text-lg font-bold text-slate-800 mb-4">STK vs. Clear Markets</h3>
-                <div class="space-y-4 text-sm text-slate-600">
+            <div class="bg-white rounded-xl shadow-sm p-6 flex flex-col" style="border: 1px solid var(--grey);">
+                <h3 class="text-lg font-bold mb-4" style="color: var(--prussian-blue);">STK vs. Clear Markets</h3>
+                <div class="space-y-4 text-sm" style="color: var(--prussian-blue);">
                     <p>
-                        <strong class="text-slate-800 block mb-1">Why STK is volatile:</strong>
+                        <strong class="block mb-1" style="color: var(--black);">Why STK is volatile:</strong>
                         Select Tight Knot (STK) is the primary material for residential decking and siding. Its price closely tracks housing starts.
                     </p>
                     <p>
-                        <strong class="text-slate-800 block mb-1">The "Spring Rush":</strong>
+                        <strong class="block mb-1" style="color: var(--black);">The "Spring Rush":</strong>
                         As contractors break ground in April/May, demand for STK spikes. Mills raise prices to match demand.
                     </p>
                     <p>
-                        <strong class="text-slate-800 block mb-1">Why not Clear grade?</strong>
+                        <strong class="block mb-1" style="color: var(--black);">Why not Clear grade?</strong>
                         Clear cedar costs 40-60% more than STK. For rustic siding applications, STK delivers the same performance at significantly lower cost.
                     </p>
-                    <div class="bg-amber-50 p-3 rounded border-l-4 border-amber-500 mt-4">
-                        <p class="text-xs text-slate-700">
+                    <div class="p-3 rounded mt-4" style="background-color: #FFF3E0; border-left: 4px solid var(--orange);">
+                        <p class="text-xs" style="color: var(--prussian-blue);">
                             <strong>Assessment:</strong> STK prices are temporarily depressed due to winter shutdowns. This discount disappears the moment ground thaws.
                         </p>
                     </div>
@@ -113,40 +118,40 @@
         </section>
 
         <!-- SECTION 1B: Current Market Quotes -->
-        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <section class="bg-white rounded-xl shadow-sm p-6" style="border: 1px solid var(--grey);">
             <div class="mb-6">
-                <h3 class="text-xl font-bold text-slate-800">Current Market Quotes</h3>
-                <p class="text-sm text-slate-500 mt-1">Vendor survey: 6 suppliers across East Coast (Jan 2026)</p>
+                <h3 class="text-xl font-bold" style="color: var(--prussian-blue);">Current Market Quotes</h3>
+                <p class="text-sm mt-1" style="color: #666;">Vendor survey: 6 suppliers across East Coast (Jan 2026)</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <!-- Quote Summary Cards -->
                 <div class="grid grid-cols-3 gap-4">
-                    <div class="p-4 bg-emerald-50 rounded-lg border border-emerald-200 text-center">
-                        <p class="text-xs font-bold text-emerald-700 uppercase">Best Quote</p>
-                        <p class="text-2xl font-extrabold text-slate-800 mt-1">$3.40</p>
-                        <p class="text-xs text-slate-500">Legacy Pre-Finishing</p>
+                    <div class="p-4 rounded-lg text-center" style="background-color: var(--grey); border: 1px solid #ccc;">
+                        <p class="text-xs font-bold uppercase" style="color: var(--prussian-blue);">Best Quote</p>
+                        <p class="text-2xl font-extrabold mt-1" style="color: var(--black);">$3.40</p>
+                        <p class="text-xs" style="color: #666;">Legacy Pre-Finishing</p>
                     </div>
-                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center">
-                        <p class="text-xs font-bold text-slate-600 uppercase">Average</p>
-                        <p class="text-2xl font-extrabold text-slate-800 mt-1">$3.84</p>
-                        <p class="text-xs text-slate-500">6 vendors</p>
+                    <div class="p-4 rounded-lg text-center" style="background-color: var(--grey); border: 1px solid #ccc;">
+                        <p class="text-xs font-bold uppercase" style="color: var(--prussian-blue);">Average</p>
+                        <p class="text-2xl font-extrabold mt-1" style="color: var(--black);">$3.84</p>
+                        <p class="text-xs" style="color: #666;">6 vendors</p>
                     </div>
-                    <div class="p-4 bg-rose-50 rounded-lg border border-rose-200 text-center">
-                        <p class="text-xs font-bold text-rose-700 uppercase">Highest</p>
-                        <p class="text-2xl font-extrabold text-slate-800 mt-1">$4.10</p>
-                        <p class="text-xs text-slate-500">Liberty Cedar</p>
+                    <div class="p-4 rounded-lg text-center" style="background-color: #FFF3E0; border: 1px solid var(--orange);">
+                        <p class="text-xs font-bold uppercase" style="color: var(--orange);">Highest</p>
+                        <p class="text-2xl font-extrabold mt-1" style="color: var(--black);">$4.10</p>
+                        <p class="text-xs" style="color: #666;">Liberty Cedar</p>
                     </div>
                 </div>
 
                 <!-- Key Insight -->
-                <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex flex-col justify-center">
-                    <p class="text-sm font-bold text-amber-800 mb-2">Vendor Selection Impact at 140k LF:</p>
+                <div class="rounded-lg p-4 flex flex-col justify-center" style="background-color: #FFF3E0; border: 1px solid var(--orange);">
+                    <p class="text-sm font-bold mb-2" style="color: var(--prussian-blue);">Vendor Selection Impact at 140k LF:</p>
                     <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold text-amber-900">$98,000</span>
-                        <span class="text-sm text-amber-700">difference between lowest and highest quote</span>
+                        <span class="text-3xl font-extrabold" style="color: var(--orange);">$98,000</span>
+                        <span class="text-sm" style="color: var(--prussian-blue);">difference between lowest and highest quote</span>
                     </div>
-                    <p class="text-xs text-slate-600 mt-2">The 21% spread between vendors ($3.40 to $4.10/lf) represents a larger cost impact than seasonal timing alone.</p>
+                    <p class="text-xs mt-2" style="color: #666;">The 21% spread between vendors ($3.40 to $4.10/lf) represents a larger cost impact than seasonal timing alone.</p>
                 </div>
             </div>
 
@@ -154,273 +159,273 @@
             <div class="mt-6 overflow-x-auto">
                 <table class="w-full text-sm">
                     <thead>
-                        <tr class="border-b border-slate-200">
-                            <th class="text-left py-2 px-3 text-xs font-bold text-slate-600 uppercase">Vendor</th>
-                            <th class="text-left py-2 px-3 text-xs font-bold text-slate-600 uppercase">Location</th>
-                            <th class="text-right py-2 px-3 text-xs font-bold text-slate-600 uppercase">Price/LF</th>
-                            <th class="text-right py-2 px-3 text-xs font-bold text-slate-600 uppercase">140k LF Cost</th>
-                            <th class="text-right py-2 px-3 text-xs font-bold text-slate-600 uppercase">vs Best</th>
+                        <tr style="border-bottom: 1px solid var(--grey);">
+                            <th class="text-left py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">Vendor</th>
+                            <th class="text-left py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">Location</th>
+                            <th class="text-right py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">Price/LF</th>
+                            <th class="text-right py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">140k LF Cost</th>
+                            <th class="text-right py-2 px-3 text-xs font-bold uppercase" style="color: var(--prussian-blue);">vs Best</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-emerald-50 border-b border-emerald-100">
-                            <td class="py-2 px-3 font-medium text-emerald-800">Legacy Pre-Finishing</td>
-                            <td class="py-2 px-3 text-slate-600">NC</td>
-                            <td class="py-2 px-3 text-right font-mono font-bold text-emerald-700">$3.40</td>
+                        <tr style="background-color: var(--grey); border-bottom: 1px solid #ccc;">
+                            <td class="py-2 px-3 font-medium" style="color: var(--prussian-blue);">Legacy Pre-Finishing</td>
+                            <td class="py-2 px-3" style="color: #666;">NC</td>
+                            <td class="py-2 px-3 text-right font-mono font-bold" style="color: var(--prussian-blue);">$3.40</td>
                             <td class="py-2 px-3 text-right font-mono">$476,000</td>
-                            <td class="py-2 px-3 text-right text-emerald-600 font-bold">—</td>
+                            <td class="py-2 px-3 text-right font-bold" style="color: var(--prussian-blue);">—</td>
                         </tr>
-                        <tr class="border-b border-slate-100">
+                        <tr style="border-bottom: 1px solid var(--grey);">
                             <td class="py-2 px-3 font-medium">Buffalo Lumber</td>
-                            <td class="py-2 px-3 text-slate-600">TN</td>
+                            <td class="py-2 px-3" style="color: #666;">TN</td>
                             <td class="py-2 px-3 text-right font-mono">$3.77</td>
                             <td class="py-2 px-3 text-right font-mono">$527,800</td>
-                            <td class="py-2 px-3 text-right text-rose-600">+$51,800</td>
+                            <td class="py-2 px-3 text-right" style="color: var(--orange);">+$51,800</td>
                         </tr>
-                        <tr class="border-b border-slate-100">
+                        <tr style="border-bottom: 1px solid var(--grey);">
                             <td class="py-2 px-3 font-medium">Lyon & Billard</td>
-                            <td class="py-2 px-3 text-slate-600">CT</td>
+                            <td class="py-2 px-3" style="color: #666;">CT</td>
                             <td class="py-2 px-3 text-right font-mono">$3.80</td>
                             <td class="py-2 px-3 text-right font-mono">$532,000</td>
-                            <td class="py-2 px-3 text-right text-rose-600">+$56,000</td>
+                            <td class="py-2 px-3 text-right" style="color: var(--orange);">+$56,000</td>
                         </tr>
-                        <tr class="border-b border-slate-100">
+                        <tr style="border-bottom: 1px solid var(--grey);">
                             <td class="py-2 px-3 font-medium">Builder's FirstSource</td>
-                            <td class="py-2 px-3 text-slate-600">CT</td>
+                            <td class="py-2 px-3" style="color: #666;">CT</td>
                             <td class="py-2 px-3 text-right font-mono">$3.93</td>
                             <td class="py-2 px-3 text-right font-mono">$550,200</td>
-                            <td class="py-2 px-3 text-right text-rose-600">+$74,200</td>
+                            <td class="py-2 px-3 text-right" style="color: var(--orange);">+$74,200</td>
                         </tr>
-                        <tr class="border-b border-slate-100">
+                        <tr style="border-bottom: 1px solid var(--grey);">
                             <td class="py-2 px-3 font-medium">Ring's End</td>
-                            <td class="py-2 px-3 text-slate-600">CT</td>
+                            <td class="py-2 px-3" style="color: #666;">CT</td>
                             <td class="py-2 px-3 text-right font-mono">$4.04</td>
                             <td class="py-2 px-3 text-right font-mono">$565,600</td>
-                            <td class="py-2 px-3 text-right text-rose-600">+$89,600</td>
+                            <td class="py-2 px-3 text-right" style="color: var(--orange);">+$89,600</td>
                         </tr>
-                        <tr class="bg-rose-50">
-                            <td class="py-2 px-3 font-medium text-rose-800">Liberty Cedar</td>
-                            <td class="py-2 px-3 text-slate-600">RI</td>
-                            <td class="py-2 px-3 text-right font-mono font-bold text-rose-700">$4.10</td>
+                        <tr style="background-color: #FFF3E0;">
+                            <td class="py-2 px-3 font-medium" style="color: var(--orange);">Liberty Cedar</td>
+                            <td class="py-2 px-3" style="color: #666;">RI</td>
+                            <td class="py-2 px-3 text-right font-mono font-bold" style="color: var(--orange);">$4.10</td>
                             <td class="py-2 px-3 text-right font-mono">$574,000</td>
-                            <td class="py-2 px-3 text-right text-rose-600 font-bold">+$98,000</td>
+                            <td class="py-2 px-3 text-right font-bold" style="color: var(--orange);">+$98,000</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="mt-4 text-xs text-slate-500 bg-slate-50 p-3 rounded-lg">
+            <div class="mt-4 text-xs p-3 rounded-lg" style="color: #666; background-color: var(--grey);">
                 <strong>Note:</strong> All quotes are for 1x8 STK Channel Cedar Siding, kiln-dried. Prices do not include freight. Legacy Pre-Finishing (NC) offers the best available price but may have limited inventory for large orders.
             </div>
         </section>
 
         <!-- SECTION 2: 12-Month Projection Chart -->
-        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <section class="bg-white rounded-xl shadow-sm p-6" style="border: 1px solid var(--grey);">
             <div class="mb-6">
-                <h3 class="text-xl font-bold text-slate-800">2026 Price Forecast: Full Year</h3>
-                <p class="text-sm text-slate-500 mt-1">Historical seasonality applied to 2026 tariff baselines.</p>
+                <h3 class="text-xl font-bold" style="color: var(--prussian-blue);">2026 Price Forecast: Full Year</h3>
+                <p class="text-sm mt-1" style="color: #666;">Historical seasonality applied to 2026 tariff baselines.</p>
             </div>
-            
+
             <div class="chart-container">
                 <canvas id="marketChart"></canvas>
             </div>
-            
-            <div class="mt-4 text-xs text-slate-500 bg-slate-50 p-4 rounded-lg flex items-start">
+
+            <div class="mt-4 text-xs p-4 rounded-lg flex items-start" style="color: #666; background-color: var(--grey);">
                 <span class="text-xl mr-2">ℹ️</span>
                 <p>
-                    <strong>Chart Logic:</strong> The "Forecast Range" represents the volatility gap. The Lower Bound assumes a recessionary housing market; the Upper Bound assumes standard demand plus the full impact of the 2026 Canadian Softwood Duty Administrative Review.
+                    <strong style="color: var(--prussian-blue);">Chart Logic:</strong> The "Forecast Range" represents the volatility gap. The Lower Bound assumes a recessionary housing market; the Upper Bound assumes standard demand plus the full impact of the 2026 Canadian Softwood Duty Administrative Review.
                 </p>
             </div>
         </section>
 
         <!-- SECTION 2B: Geopolitical Risk -->
-        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-            <h3 class="text-xl font-bold text-slate-800 mb-4">Geopolitical Risk: Canadian Softwood Tariffs</h3>
+        <section class="bg-white rounded-xl shadow-sm p-6" style="border: 1px solid var(--grey);">
+            <h3 class="text-xl font-bold mb-4" style="color: var(--prussian-blue);">Geopolitical Risk: Canadian Softwood Tariffs</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                    <p class="text-sm font-bold text-amber-800 mb-2">Current Combined Tariff: ~45%</p>
-                    <ul class="text-xs text-slate-600 space-y-1">
+                <div class="rounded-lg p-4" style="background-color: #FFF3E0; border: 1px solid var(--orange);">
+                    <p class="text-sm font-bold mb-2" style="color: var(--prussian-blue);">Current Combined Tariff: ~45%</p>
+                    <ul class="text-xs space-y-1" style="color: var(--prussian-blue);">
                         <li>Anti-dumping duties: 14.63%</li>
                         <li>Countervailing duties: 20.53%</li>
                         <li>Section 232 tariff (Oct 2025): 10%</li>
                     </ul>
-                    <p class="text-xs text-slate-500 mt-2 italic">Current $3.40/lf price already reflects these tariffs.</p>
+                    <p class="text-xs mt-2 italic" style="color: #666;">Current $3.40/lf price already reflects these tariffs.</p>
                 </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-                    <p class="text-sm font-bold text-slate-700 mb-2">2026 Risk Factors</p>
-                    <ul class="text-xs text-slate-600 space-y-1">
-                        <li><span class="text-amber-600 font-bold">CUSMA Review:</span> Trade exemptions "at risk" in 2026</li>
-                        <li><span class="text-emerald-600 font-bold">Jan 2026 Pause:</span> Planned tariff increases canceled</li>
-                        <li><span class="text-slate-500">Direction:</span> Could rise (CUSMA revoked) or fall (deal)</li>
+                <div class="rounded-lg p-4" style="background-color: var(--grey); border: 1px solid #ccc;">
+                    <p class="text-sm font-bold mb-2" style="color: var(--prussian-blue);">2026 Risk Factors</p>
+                    <ul class="text-xs space-y-1" style="color: var(--prussian-blue);">
+                        <li><span class="font-bold" style="color: var(--orange);">CUSMA Review:</span> Trade exemptions "at risk" in 2026</li>
+                        <li><span class="font-bold" style="color: var(--prussian-blue);">Jan 2026 Pause:</span> Planned tariff increases canceled</li>
+                        <li><span style="color: #666;">Direction:</span> Could rise (CUSMA revoked) or fall (deal)</li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-4 text-xs text-slate-500">
-                <strong>Sources:</strong>
-                <a href="https://www.congress.gov/crs-product/R48781" target="_blank" class="text-blue-600 hover:underline ml-1">Congress.gov CRS Report</a> |
-                <a href="https://www.nahb.org/blog/2025/02/trump-imposes-tariff-on-lumber" target="_blank" class="text-blue-600 hover:underline">NAHB Section 232 Analysis</a> |
-                <a href="https://canada.constructconnect.com/dcn/news/economic/2026/01/a-tariff-exemption-was-canadas-salvation-in-2025-its-absolutely-at-risk-in-2026" target="_blank" class="text-blue-600 hover:underline">ConstructConnect 2026 Outlook</a>
+            <div class="mt-4 text-xs" style="color: #666;">
+                <strong style="color: var(--prussian-blue);">Sources:</strong>
+                <a href="https://www.congress.gov/crs-product/R48781" target="_blank" class="hover:underline ml-1" style="color: var(--prussian-blue);">Congress.gov CRS Report</a> |
+                <a href="https://www.nahb.org/blog/2025/02/trump-imposes-tariff-on-lumber" target="_blank" class="hover:underline" style="color: var(--prussian-blue);">NAHB Section 232 Analysis</a> |
+                <a href="https://canada.constructconnect.com/dcn/news/economic/2026/01/a-tariff-exemption-was-canadas-salvation-in-2025-its-absolutely-at-risk-in-2026" target="_blank" class="hover:underline" style="color: var(--prussian-blue);">ConstructConnect 2026 Outlook</a>
             </div>
         </section>
 
         <!-- SECTION 3: Financial Scenarios -->
         <section>
-            <h3 class="text-xl font-bold text-slate-800 mb-4 px-2">Cost of Waiting: Updated Quantity Models</h3>
+            <h3 class="text-xl font-bold mb-4 px-2" style="color: var(--prussian-blue);">Cost of Waiting: Updated Quantity Models</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Scenario 1 -->
-                <div class="bg-white p-6 rounded-xl border-t-4 border-slate-300 shadow-sm hover:shadow-md transition">
-                    <h4 class="font-bold text-slate-700 text-lg">100,000 LF</h4>
-                    <p class="text-xs text-slate-400 uppercase tracking-wide mb-4">Baseline Estimate</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" style="border-top: 4px solid var(--grey); border: 1px solid var(--grey); border-top: 4px solid #ccc;">
+                    <h4 class="font-bold text-lg" style="color: var(--prussian-blue);">100,000 LF</h4>
+                    <p class="text-xs uppercase tracking-wide mb-4" style="color: #999;">Baseline Estimate</p>
                     <div class="space-y-3">
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">Jan/Feb Price ($3.40):</span>
+                            <span style="color: #666;">Jan/Feb Price ($3.40):</span>
                             <span class="font-mono font-bold">$340,000</span>
                         </div>
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">March Price ($3.47):</span>
-                            <span class="font-mono font-bold text-rose-600">$347,000</span>
+                            <span style="color: #666;">March Price ($3.47):</span>
+                            <span class="font-mono font-bold" style="color: var(--orange);">$347,000</span>
                         </div>
-                        <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
-                            <span class="font-bold text-slate-700 text-sm">Loss:</span>
-                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$7,000</span>
+                        <div class="pt-3 flex justify-between items-center" style="border-top: 1px solid var(--grey);">
+                            <span class="font-bold text-sm" style="color: var(--prussian-blue);">Loss:</span>
+                            <span class="font-bold px-2 py-1 rounded" style="color: var(--orange); background-color: #FFF3E0;">-$7,000</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Scenario 2 -->
-                <div class="bg-white p-6 rounded-xl border-t-4 border-blue-500 shadow-sm hover:shadow-md transition relative overflow-hidden">
-                    <h4 class="font-bold text-slate-700 text-lg">120,000 LF</h4>
-                    <p class="text-xs text-slate-400 uppercase tracking-wide mb-4">Revised Low End</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition relative overflow-hidden" style="border: 1px solid var(--grey); border-top: 4px solid var(--prussian-blue);">
+                    <h4 class="font-bold text-lg" style="color: var(--prussian-blue);">120,000 LF</h4>
+                    <p class="text-xs uppercase tracking-wide mb-4" style="color: #999;">Revised Low End</p>
                     <div class="space-y-3">
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">Jan/Feb Price ($3.40):</span>
+                            <span style="color: #666;">Jan/Feb Price ($3.40):</span>
                             <span class="font-mono font-bold">$408,000</span>
                         </div>
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">March Price ($3.47):</span>
-                            <span class="font-mono font-bold text-rose-600">$416,400</span>
+                            <span style="color: #666;">March Price ($3.47):</span>
+                            <span class="font-mono font-bold" style="color: var(--orange);">$416,400</span>
                         </div>
-                        <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
-                            <span class="font-bold text-slate-700 text-sm">Loss:</span>
-                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$8,400</span>
+                        <div class="pt-3 flex justify-between items-center" style="border-top: 1px solid var(--grey);">
+                            <span class="font-bold text-sm" style="color: var(--prussian-blue);">Loss:</span>
+                            <span class="font-bold px-2 py-1 rounded" style="color: var(--orange); background-color: #FFF3E0;">-$8,400</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Scenario 3 -->
-                <div class="bg-white p-6 rounded-xl border-t-4 border-emerald-600 shadow-md transform scale-105 z-10 overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-bl">LIKELY SCOPE</div>
-                    <h4 class="font-bold text-slate-700 text-lg">140,000 LF</h4>
-                    <p class="text-xs text-slate-400 uppercase tracking-wide mb-4">Revised High End</p>
+                <div class="bg-white p-6 rounded-xl shadow-md transform scale-105 z-10 overflow-hidden" style="border: 1px solid var(--grey); border-top: 4px solid var(--orange);">
+                    <div class="absolute top-0 right-0 text-white text-[10px] font-bold px-2 py-1 rounded-bl" style="background-color: var(--orange);">LIKELY SCOPE</div>
+                    <h4 class="font-bold text-lg" style="color: var(--prussian-blue);">140,000 LF</h4>
+                    <p class="text-xs uppercase tracking-wide mb-4" style="color: #999;">Revised High End</p>
                     <div class="space-y-3">
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">Jan/Feb Price ($3.40):</span>
+                            <span style="color: #666;">Jan/Feb Price ($3.40):</span>
                             <span class="font-mono font-bold">$476,000</span>
                         </div>
                         <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">March Price ($3.47):</span>
-                            <span class="font-mono font-bold text-rose-600">$485,800</span>
+                            <span style="color: #666;">March Price ($3.47):</span>
+                            <span class="font-mono font-bold" style="color: var(--orange);">$485,800</span>
                         </div>
-                        <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
-                            <span class="font-bold text-slate-700 text-sm">Potential Loss:</span>
-                            <span class="font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">-$9,800</span>
+                        <div class="pt-3 flex justify-between items-center" style="border-top: 1px solid var(--grey);">
+                            <span class="font-bold text-sm" style="color: var(--prussian-blue);">Potential Loss:</span>
+                            <span class="font-bold px-2 py-1 rounded" style="color: var(--orange); background-color: #FFF3E0;">-$9,800</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Connecting Note -->
-            <div class="mt-4 text-sm text-slate-600 bg-slate-50 border border-slate-200 rounded-lg p-4">
-                <strong>Note:</strong> These figures assume the $3.40/lf quote remains available. If delayed and the best vendor sells out, add an additional <strong class="text-rose-600">$51,800</strong> (see vendor risk below).
+            <div class="mt-4 text-sm rounded-lg p-4" style="color: var(--prussian-blue); background-color: var(--grey); border: 1px solid #ccc;">
+                <strong>Note:</strong> These figures assume the $3.40/lf quote remains available. If delayed and the best vendor sells out, add an additional <strong style="color: var(--orange);">$51,800</strong> (see vendor risk below).
             </div>
 
             <!-- Vendor Risk Scenario -->
-            <div class="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-6">
+            <div class="mt-6 rounded-xl p-6" style="background-color: #FFF3E0; border: 1px solid var(--orange);">
                 <div class="flex items-start gap-4">
-                    <div class="bg-amber-500 text-white rounded-lg p-2 flex-shrink-0">
+                    <div class="text-white rounded-lg p-2 flex-shrink-0" style="background-color: var(--orange);">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h4 class="font-bold text-amber-900 text-lg mb-2">Vendor Availability Risk (140k LF)</h4>
-                        <p class="text-sm text-amber-800 mb-4">If the best-priced vendor sells out or cannot fulfill the order, the next available tier costs significantly more.</p>
+                        <h4 class="font-bold text-lg mb-2" style="color: var(--prussian-blue);">Vendor Availability Risk (140k LF)</h4>
+                        <p class="text-sm mb-4" style="color: var(--prussian-blue);">If the best-priced vendor sells out or cannot fulfill the order, the next available tier costs significantly more.</p>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-white rounded-lg p-4 border border-amber-200">
-                                <p class="text-xs font-bold text-emerald-700 uppercase mb-1">Best Quote Now</p>
-                                <p class="text-xl font-bold text-slate-800">$476,000</p>
-                                <p class="text-xs text-slate-500">Legacy @ $3.40/lf</p>
+                            <div class="bg-white rounded-lg p-4" style="border: 1px solid var(--grey);">
+                                <p class="text-xs font-bold uppercase mb-1" style="color: var(--prussian-blue);">Best Quote Now</p>
+                                <p class="text-xl font-bold" style="color: var(--black);">$476,000</p>
+                                <p class="text-xs" style="color: #666;">Legacy @ $3.40/lf</p>
                             </div>
-                            <div class="bg-white rounded-lg p-4 border border-amber-200">
-                                <p class="text-xs font-bold text-amber-700 uppercase mb-1">If Best Unavailable</p>
-                                <p class="text-xl font-bold text-slate-800">$527,800</p>
-                                <p class="text-xs text-slate-500">Buffalo Lumber @ $3.77/lf</p>
+                            <div class="bg-white rounded-lg p-4" style="border: 1px solid var(--grey);">
+                                <p class="text-xs font-bold uppercase mb-1" style="color: var(--orange);">If Best Unavailable</p>
+                                <p class="text-xl font-bold" style="color: var(--black);">$527,800</p>
+                                <p class="text-xs" style="color: #666;">Buffalo Lumber @ $3.77/lf</p>
                             </div>
-                            <div class="bg-white rounded-lg p-4 border border-rose-200">
-                                <p class="text-xs font-bold text-rose-700 uppercase mb-1">Additional Cost</p>
-                                <p class="text-xl font-bold text-rose-600">$51,800</p>
-                                <p class="text-xs text-slate-500">+11% over best quote</p>
+                            <div class="bg-white rounded-lg p-4" style="border: 1px solid var(--orange);">
+                                <p class="text-xs font-bold uppercase mb-1" style="color: var(--orange);">Additional Cost</p>
+                                <p class="text-xl font-bold" style="color: var(--orange);">$51,800</p>
+                                <p class="text-xs" style="color: #666;">+11% over best quote</p>
                             </div>
                         </div>
-                        <p class="text-xs text-amber-700 mt-4 italic">Waiting risks losing access to the best-priced vendor. Low-cost suppliers often have limited inventory for large orders.</p>
+                        <p class="text-xs mt-4 italic" style="color: var(--prussian-blue);">Waiting risks losing access to the best-priced vendor. Low-cost suppliers often have limited inventory for large orders.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Total Risk Summary -->
-            <div class="mt-6 bg-rose-50 border-2 border-rose-300 rounded-xl p-6">
-                <h4 class="font-bold text-rose-900 text-lg mb-4">Total Risk Summary (140k LF)</h4>
+            <div class="mt-6 rounded-xl p-6" style="background-color: var(--prussian-blue);">
+                <h4 class="font-bold text-lg mb-4 text-white">Total Risk Summary (140k LF)</h4>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="bg-white rounded-lg p-4 border border-rose-200">
-                        <p class="text-xs font-bold text-slate-600 uppercase mb-1">Seasonal Risk</p>
-                        <p class="text-xl font-bold text-rose-600">+$9,800</p>
-                        <p class="text-xs text-slate-500">Waiting until March</p>
+                    <div class="bg-white rounded-lg p-4">
+                        <p class="text-xs font-bold uppercase mb-1" style="color: var(--prussian-blue);">Seasonal Risk</p>
+                        <p class="text-xl font-bold" style="color: var(--orange);">+$9,800</p>
+                        <p class="text-xs" style="color: #666;">Waiting until March</p>
                     </div>
-                    <div class="bg-white rounded-lg p-4 border border-rose-200">
-                        <p class="text-xs font-bold text-slate-600 uppercase mb-1">Vendor Risk</p>
-                        <p class="text-xl font-bold text-rose-600">+$51,800</p>
-                        <p class="text-xs text-slate-500">If best vendor sells out</p>
+                    <div class="bg-white rounded-lg p-4">
+                        <p class="text-xs font-bold uppercase mb-1" style="color: var(--prussian-blue);">Vendor Risk</p>
+                        <p class="text-xl font-bold" style="color: var(--orange);">+$51,800</p>
+                        <p class="text-xs" style="color: #666;">If best vendor sells out</p>
                     </div>
-                    <div class="bg-rose-600 rounded-lg p-4 text-white">
+                    <div class="rounded-lg p-4 text-white" style="background-color: var(--orange);">
                         <p class="text-xs font-bold uppercase mb-1">Combined Worst Case</p>
                         <p class="text-2xl font-extrabold">+$61,600</p>
                         <p class="text-xs opacity-80">Both risks materialize</p>
                     </div>
                 </div>
-                <p class="text-sm text-rose-800 mt-4 font-medium">Acting now eliminates both risks. Delaying exposes the project to one or both.</p>
+                <p class="text-sm mt-4 font-medium text-white">Acting now eliminates both risks. Delaying exposes the project to one or both.</p>
             </div>
         </section>
 
         <!-- FOOTER: Clickable Sources -->
-        <footer class="mt-12 py-8 bg-white border-t border-slate-200">
+        <footer class="mt-12 py-8 bg-white" style="border-top: 1px solid var(--grey);">
             <div class="container mx-auto px-6">
-                <h4 class="text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider">Verified Data Sources</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-500">
+                <h4 class="text-sm font-bold mb-4 uppercase tracking-wider" style="color: var(--prussian-blue);">Data Sources</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs" style="color: #666;">
                     <div>
-                        <p class="mb-2"><strong>Pricing Trends & Futures:</strong></p>
+                        <p class="mb-2"><strong style="color: var(--prussian-blue);">Pricing Trends & Futures:</strong></p>
                         <ul class="space-y-2 pl-2">
-                            <li><a href="https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber.html" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">CME Group Lumber Futures <span class="ml-1 text-[10px] text-gray-400">(Live Market Data)</span></a></li>
-                            <li><a href="https://madisonsreport.com/lumber-market-updates/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">Madison's Lumber Reporter <span class="ml-1 text-[10px] text-gray-400">(Market Updates)</span></a></li>
+                            <li><a href="https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber.html" target="_blank" class="hover:underline flex items-center" style="color: var(--prussian-blue);">CME Group Lumber Futures <span class="ml-1 text-[10px]" style="color: #999;">(Live Market Data)</span></a></li>
+                            <li><a href="https://madisonsreport.com/lumber-market-updates/" target="_blank" class="hover:underline flex items-center" style="color: var(--prussian-blue);">Madison's Lumber Reporter <span class="ml-1 text-[10px]" style="color: #999;">(Market Updates)</span></a></li>
                         </ul>
                     </div>
                     <div>
-                        <p class="mb-2"><strong>Seasonal Price Data:</strong></p>
+                        <p class="mb-2"><strong style="color: var(--prussian-blue);">Seasonal Price Data:</strong></p>
                         <ul class="space-y-2 pl-2">
-                            <li><a href="https://fred.stlouisfed.org/series/WPU084903" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">FRED: Wood Siding PPI <span class="ml-1 text-[10px] text-gray-400">(2003-2025 Historical)</span></a></li>
-                            <li><a href="https://www.eastcoastonline.com/insights/seasonal-lumber-price-trends-amp-when-to-lock-in-bulk-orders" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">East Coast Lumber <span class="ml-1 text-[10px] text-gray-400">(Seasonal Trends)</span></a></li>
-                            <li><a href="https://www.resourcewise.com/market-watch-blog/understanding-seasonality-in-timber-prices" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">ResourceWise <span class="ml-1 text-[10px] text-gray-400">(Seasonality Analysis)</span></a></li>
+                            <li><a href="https://fred.stlouisfed.org/series/WPU084903" target="_blank" class="hover:underline flex items-center" style="color: var(--prussian-blue);">FRED: Wood Siding PPI <span class="ml-1 text-[10px]" style="color: #999;">(2003-2025 Historical)</span></a></li>
+                            <li><a href="https://www.eastcoastonline.com/insights/seasonal-lumber-price-trends-amp-when-to-lock-in-bulk-orders" target="_blank" class="hover:underline flex items-center" style="color: var(--prussian-blue);">East Coast Lumber <span class="ml-1 text-[10px]" style="color: #999;">(Seasonal Trends)</span></a></li>
+                            <li><a href="https://www.resourcewise.com/market-watch-blog/understanding-seasonality-in-timber-prices" target="_blank" class="hover:underline flex items-center" style="color: var(--prussian-blue);">ResourceWise <span class="ml-1 text-[10px]" style="color: #999;">(Seasonality Analysis)</span></a></li>
                         </ul>
                     </div>
                     <div>
-                        <p class="mb-2"><strong>Tariffs & Supply Chain:</strong></p>
+                        <p class="mb-2"><strong style="color: var(--prussian-blue);">Tariffs & Supply Chain:</strong></p>
                         <ul class="space-y-2 pl-2">
-                            <li><a href="https://www.nahb.org/blog/2025/08/canadian-lumber-cvd-rates" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">NAHB: Canadian Lumber CVD Rates <span class="ml-1 text-[10px] text-gray-400">(Tariff Analysis)</span></a></li>
-                            <li><a href="https://news.gov.bc.ca/releases/2021FLNRO0068-002088" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">BC Gov: Old-Growth Deferrals <span class="ml-1 text-[10px] text-gray-400">(Supply Deferral Announcement)</span></a></li>
+                            <li><a href="https://www.nahb.org/blog/2025/08/canadian-lumber-cvd-rates" target="_blank" class="hover:underline flex items-center" style="color: var(--prussian-blue);">NAHB: Canadian Lumber CVD Rates <span class="ml-1 text-[10px]" style="color: #999;">(Tariff Analysis)</span></a></li>
+                            <li><a href="https://news.gov.bc.ca/releases/2021FLNRO0068-002088" target="_blank" class="hover:underline flex items-center" style="color: var(--prussian-blue);">BC Gov: Old-Growth Deferrals <span class="ml-1 text-[10px]" style="color: #999;">(Supply Deferral Announcement)</span></a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="mt-6 pt-6 border-t border-slate-100 text-center text-[10px] text-slate-400">
+                <div class="mt-6 pt-6 text-center text-[10px]" style="border-top: 1px solid var(--grey); color: #999;">
                     <p>Projections based on FRED PPI seasonal data (2005-2023) and current tariff schedules. Future market performance subject to change.</p>
                 </div>
             </div>
@@ -455,8 +460,8 @@
                     {
                         label: 'Projected Price (Mean)',
                         data: dataMean,
-                        borderColor: '#0F766E', // Teal
-                        backgroundColor: '#0F766E',
+                        borderColor: '#14213D', // Prussian Blue
+                        backgroundColor: '#14213D',
                         borderWidth: 3,
                         tension: 0.4,
                         fill: false,
@@ -466,7 +471,7 @@
                         label: 'Forecast Uncertainty Range',
                         data: dataHigh,
                         borderColor: 'transparent',
-                        backgroundColor: 'rgba(37, 99, 235, 0.1)', // Light Blue fill
+                        backgroundColor: 'rgba(20, 33, 61, 0.15)', // Prussian Blue fill
                         fill: '+1', // Fill to the next dataset (dataLow)
                         tension: 0.4,
                         pointRadius: 0
@@ -513,15 +518,15 @@
                                 type: 'line',
                                 xMin: 2, // March
                                 xMax: 2,
-                                borderColor: '#B45309',
+                                borderColor: '#FCA311',
                                 borderWidth: 2,
                                 borderDash: [5, 5],
                                 label: {
                                     display: true,
                                     content: 'Budget Approval (Mar)',
                                     position: 'start',
-                                    backgroundColor: '#B45309',
-                                    color: 'white'
+                                    backgroundColor: '#FCA311',
+                                    color: '#14213D'
                                 }
                             }
                         }
